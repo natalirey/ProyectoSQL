@@ -56,8 +56,8 @@ VALUES
 
 INSERT INTO CLASES (ID_CLASE, NOMBRE_CLASE, ID_EMPLEADO, DIAS, HORARIO, ID_MATERIAL)
 VALUES
-    (1, 'Spinning', 8, 'Lunes, Miércoles, Viernes', '18:00-19:00', 2),
-    (2, 'Yoga', 7, 'Martes, Jueves', '09:00-10:00', 1),
-    (3, 'Pilates', 7, 'Lunes, Miércoles', '09:00-10:00', 5),
-    (4, 'Funcional', 9, 'Lunes, Miércoles', '11:00-12:00', 4),
-    (5, 'Fútbol Fit', 9, 'Jueves, Sábados', '18:00-19:00', 3);
+    (1, 'Spinning', 8, 'Monday, Wednesday, Friday', '18:00-19:00', 2),
+    (2, 'Yoga', 7, 'Tuesday, Thursday', '09:00-10:00', 1),
+    (3, 'Pilates', 7, 'Monday, Wednesday', '09:00-10:00', 5),
+    (4, 'Funcional', 9, 'Monday, Wednesday', '11:00-12:00', 4),
+    (5, 'Fútbol Fit', 9, 'Thursday, Saturday', '18:00-19:00', 3);
