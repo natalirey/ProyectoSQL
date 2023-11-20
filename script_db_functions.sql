@@ -27,16 +27,34 @@ DETERMINISTIC
 BEGIN
     DECLARE fechaAlta DATE;
     DECLARE tiempoMiembro VARCHAR(50);
+    DECLARE anos INT;
+    DECLARE meses INT;
 
     SELECT FECHA_ALTA INTO fechaAlta FROM MIEMBROS WHERE DNI_MIEMBRO = dniMiembro;
 
-    SET tiempoMiembro = CONCAT(TIMESTAMPDIFF(YEAR, fechaAlta, CURDATE()), ' años ',
-                               TIMESTAMPDIFF(MONTH, fechaAlta, CURDATE()) % 12, ' meses');
+    SET anos = TIMESTAMPDIFF(YEAR, fechaAlta, CURDATE());
+    SET meses = TIMESTAMPDIFF(MONTH, fechaAlta, CURDATE()) % 12;
+
+    SET tiempoMiembro = '';
+
+    IF anos > 0 THEN
+        SET tiempoMiembro = CONCAT(anos, ' año');
+        IF anos > 1 THEN
+            SET tiempoMiembro = CONCAT(tiempoMiembro, 's');
+        END IF;
+    ELSE
+        IF meses > 0 THEN
+            SET tiempoMiembro = CONCAT(meses, ' mes');
+            IF meses > 1 THEN
+                SET tiempoMiembro = CONCAT(tiempoMiembro, 'es');
+            END IF;
+        END IF;
+    END IF;
 
     RETURN tiempoMiembro;
 END //
 
 DELIMITER ;
 
--- -- Llamada a la función
-SELECT calcularAntiguedadPorDNI('30123456') AS TiempoDeMembresia;
+-- Llamada a la función
+SELECT calcularAntiguedadPorDNI('34123458') AS Antiguedad;
