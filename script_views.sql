@@ -1,3 +1,12 @@
+/*
+    Descripción de las vistas:
+    1) vw_miembros_pagos_info : sirve para visualizar la información más relevante de los miembros. Utiliza las tablas "MIEMBROS" Y "PAGOS".
+    2) vw_empleados_puestos : sirve para ver los empleados y sus puestos en una sola vista ya que el puesto del empleado en la tabla EMPLEADOS es un ID, en esta vista trae directamente el puesto y el nombre del empleado. Utiliza las tablas "EMPLEADOS" Y "PUESTOS_EMPLEADOS".
+    3) vw_clases_empleados_hoy : sirve para ver que clases se dan en el día de hoy, horario y el instructor asignado. Utiliza las tablas "CLASES" y "EMPLEADOS"
+    4) vw_clase_empleado_material : sirve para ver los materiales que va a utilizar el empleado y en qué clase. Utiliza las tablas "MATERIALES" , "EMPLEADOS" y "CLASES".
+    5) vw_materiales_mantenimiento : esta vista trae los materiales que la fecha de mantenimiento es anterior a la actual, es decir los materiales que requieren mantenimiento. Utiliza la tabla "MATERIALES" y la fecha actual.
+*/
+
 CREATE OR REPLACE VIEW vw_miembros_pagos_info AS (
 SELECT
     M.ID_MIEMBRO,
@@ -44,10 +53,12 @@ ORDER BY
 );
 
 CREATE OR REPLACE VIEW vw_materiales_mantenimiento AS (
-SELECT
-    M.NOMBRE_MATERIAL,
-    M.FECHA_MANTENIMIENTO
-FROM
-    MATERIALES M
-WHERE
-    M.FECHA_MANTENIMIENTO IS NOT NULL);
+    SELECT
+        M.NOMBRE_MATERIAL,
+        M.FECHA_MANTENIMIENTO
+    FROM
+        MATERIALES M
+    WHERE
+        M.FECHA_MANTENIMIENTO IS NOT NULL
+        AND M.FECHA_MANTENIMIENTO < CURDATE()
+);
