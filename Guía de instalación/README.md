@@ -16,6 +16,8 @@ Para la instalación de la base de datos 'fitnessclub_db' por favor seguir los s
 - 6 - Triggers : Al ejecutar [script_db_triggers.sql](<../Archivos SQL/6 - Triggers/script_db_triggers.sql>) se crearán los disparadores de la DB.
 - 7 - DCL - Usuarios y roles : Al ejecutar [script_db_permisos_users.sql](<../Archivos SQL/7 - DCL - Usuarios y roles/script_db_permisos_users.sql>) se crearán los usuarios y sus respectivos permisos.
 - 8 - TCL - Transacciones : Al ejecutar [script_TCL.sql](<../Archivos SQL/8 - TCL - Transacciones/script_TCL.sql>) se crerán los comandos para una trabajar en la DB de manera controlada.
-- 9 - Backup y restauración : Al ejecutar
+- 9 - Backup y restauración : Al ejecutar [Dump20240102.sql](<../Archivos SQL/9 - Backup y restauracion/Dump20240102.sql>) se realiza un backup completo de la base
+
+
 
 Creado por Natali Rey en 2024 para el curso de SQL de CoderHouse.
