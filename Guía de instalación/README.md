@@ -8,7 +8,7 @@ Para la instalación de la base de datos 'fitnessclub_db' por favor seguir los s
 
 1 - Creación de esquema y tablas : Al ejecutar el script_db_fitnessclub.sql se creará el esquema y las tablas que componene la DB.
 2 - Inserción de datos : Al ejecutar el script_data_insertion.sql se insertarán los datos de las tablas.
-3 - Vistas : Al ejecutar [Title](<../Archivos SQL/3 - Vistas/script_views.sql>)se crearan las vistas de la DB.
+3 - Vistas : Al ejecutar [script_views.sql](<../Archivos SQL/3 - Vistas/script_views.sql>)se crearan las vistas de la DB.
 4 - Funciones : Al ejecutar se crearan las funciones de la DB.
 5 - Procedimientos almacenados : Al ejecutar 
 6 - Triggers
