@@ -1,4 +1,4 @@
--- Función para obtener el precio total si el tipo de membresía es anual(aplica un descuento)
+-- Función para obtener el precio total si el tipo de membresía es anual (aplica un descuento)
 DELIMITER //
 
 CREATE FUNCTION calcularPrecioTotal(precioBase DECIMAL(10, 2), descuentoPorcentaje INT)
@@ -57,4 +57,4 @@ END //
 DELIMITER ;
 
 -- Llamada a la función
-SELECT calcularAntiguedadPorDNI('34123458') AS Antiguedad;
+SELECT calcularAntiguedadPorDNI('30123456') AS Antiguedad;

@@ -34,30 +34,30 @@ VALUES
     (14, 'Membresía Mensual', 19500.00, '2024-07-01', 'Tarjeta de Crédito'),
     (15, 'Membresía Mensual', 19500.00, '2024-08-12', 'Efectivo');
     
-INSERT INTO REGISTRO_PAGOS (ID_MIEMBRO, PERIODO, FECHA_DE_PAGO)
+INSERT INTO REGISTRO_PAGOS (ID_PAGO,ID_MIEMBRO, PERIODO, FECHA_DE_PAGO)
 VALUES
-    (1, 'OCTUBRE 2023', '2023-10-15 10:30:00'),
-    (1, 'NOVIEMBRE 2023', '2023-11-20 11:15:00'),
-    (2, 'OCTUBRE 2023', '2023-10-10 15:45:00'),
-    (2, 'NOVIEMBRE 2023', '2023-11-05 14:00:00'),
-    (3, 'OCTUBRE 2023', '2023-10-20 09:00:00'),
-    (3, 'NOVIEMBRE 2023', '2023-11-10 12:30:00'),
-    (4, 'OCTUBRE 2023', '2023-10-05 13:45:00'),
-    (4, 'NOVIEMBRE 2023', '2023-11-15 16:00:00'),
-    (5, 'OCTUBRE 2023', '2023-10-25 08:15:00'),
-    (5, 'NOVIEMBRE 2023', '2023-11-01 10:45:00'),
-    (6, 'OCTUBRE 2023', '2023-10-10 14:30:00'),
-    (7, 'OCTUBRE 2023', '2023-10-15 11:00:00'),
-    (7, 'NOVIEMBRE 2023', '2023-11-10 13:30:00'),
-    (8, 'OCTUBRE 2023', '2023-10-20 15:15:00'),
-    (9, 'OCTUBRE 2023', '2023-10-25 10:30:00'),
-    (10, 'NOVIEMBRE 2023', '2023-11-25 11:30:00'),
-    (11, 'OCTUBRE 2023', '2023-10-20 13:00:00'),
-    (12, 'NOVIEMBRE 2023', '2023-11-20 08:30:00'),
-    (13, 'OCTUBRE 2023', '2023-10-10 12:30:00'),
-    (13, 'NOVIEMBRE 2023', '2023-11-05 14:45:00'),
-    (14, 'NOVIEMBRE 2023', '2023-11-15 10:00:00'),
-    (15, 'OCTUBRE 2023', '2023-10-30 11:15:00');
+    ('HASH001', 1, 'OCTUBRE 2023', '2023-10-15 10:30:00'),
+    ('HASH002', 1, 'NOVIEMBRE 2023', '2023-11-20 11:15:00'),
+    ('HASH003', 2, 'OCTUBRE 2023', '2023-10-10 15:45:00'),
+    ('HASH004', 2, 'NOVIEMBRE 2023', '2023-11-05 14:00:00'),
+    ('HASH005', 3, 'OCTUBRE 2023', '2023-10-20 09:00:00'),
+    ('HASH006', 3, 'NOVIEMBRE 2023', '2023-11-10 12:30:00'),
+    ('HASH007', 4, 'OCTUBRE 2023', '2023-10-05 13:45:00'),
+    ('HASH008', 4, 'NOVIEMBRE 2023', '2023-11-15 16:00:00'),
+    ('HASH009', 5, 'OCTUBRE 2023', '2023-10-25 08:15:00'),
+    ('HASH010', 5, 'NOVIEMBRE 2023', '2023-11-01 10:45:00'),
+    ('HASH011', 6, 'OCTUBRE 2023', '2023-10-10 14:30:00'),
+    ('HASH012', 7, 'OCTUBRE 2023', '2023-10-15 11:00:00'),
+    ('HASH013', 7, 'NOVIEMBRE 2023', '2023-11-10 13:30:00'),
+    ('HASH014', 8, 'OCTUBRE 2023', '2023-10-20 15:15:00'),
+    ('HASH015', 9, 'OCTUBRE 2023', '2023-10-25 10:30:00'),
+    ('HASH016', 10, 'NOVIEMBRE 2023', '2023-11-25 11:30:00'),
+    ('HASH017', 11, 'OCTUBRE 2023', '2023-10-20 13:00:00'),
+    ('HASH018', 12, 'NOVIEMBRE 2023', '2023-11-20 08:30:00'),
+    ('HASH019', 13, 'OCTUBRE 2023', '2023-10-10 12:30:00'),
+    ('HASH020', 13, 'NOVIEMBRE 2023', '2023-11-05 14:45:00'),
+    ('HASH021', 14, 'NOVIEMBRE 2023', '2023-11-15 10:00:00'),
+    ('HASH022', 15, 'OCTUBRE 2023', '2023-10-30 11:15:00');
     
 INSERT INTO MATERIALES (ID_MATERIAL, NOMBRE_MATERIAL, FECHA_DE_COMPRA, FECHA_MANTENIMIENTO)
 VALUES
@@ -94,10 +94,10 @@ VALUES
     
 INSERT INTO EMPLEADOS (ID_EMPLEADO, ID_PUESTO, NOMBRE_EMPLEADO, DNI_EMPLEADO, FECHA_NACIMIENTO, CELULAR, EMAIL, CONTACTO_EMERGENCIA, FECHA_INGRESO, SALARIO)
 VALUES
-    (1, 2, 'Franco Díaz', '38555111', '1985-03-25', '1122334455', 'frandiaz@email.com', '1122334456', '2021-06-10', 300000.00),
-    (2, 5, 'Ana López', '38555111', '1990-11-12', '1122334455', 'lopezana@email.com', '1122334456', '2022-02-20', 200000.00),
+    (1, 2, 'Franco Díaz', '38355111', '1985-03-25', '1122334455', 'frandiaz@email.com', '1122334456', '2021-06-10', 300000.00),
+    (2, 5, 'Ana López', '38575111', '1990-11-12', '1122334455', 'lopezana@email.com', '1122334456', '2022-02-20', 200000.00),
 	(3, 5, 'José Suarez', '29555111', '1980-11-12', '1127334455', 'josesuarez@email.com', '1122334456', '2022-02-20', 200000.00),
-    (4, 2, 'Francisca Díaz', '38555111', '1985-03-25', '1152334455', 'fdiaz@email.com', '1121334456', '2021-06-10', 300000.00),
+    (4, 2, 'Francisca Díaz', '38645111', '1985-03-25', '1152334455', 'fdiaz@email.com', '1121334456', '2021-06-10', 300000.00),
     (5, 1, 'Carla Montana', '38555111', '1985-03-25', '1127334455', 'cmontana@email.com', '1122134456', '2021-06-10', 350000.00),
     (6, 1, 'Florencia Gonzales', '38555111', '1985-03-25', '1122334455', 'gonzalesflor@email.com', '1122134456', '2021-06-10', 350000.00),
     (7, 3, 'Anabela Flores', '38555111', '1985-03-25', '1128334455', 'floresani@email.com', '1122314456', '2021-06-10', 400000.00),
@@ -110,18 +110,18 @@ VALUES
     (14, 9, 'Diego Soto', '25555115', '1990-08-12', '1122334462', 'diegosoto@email.com', '1122334463', '2023-01-10', 350000.00),
     (15, 10, 'Marina Silva', '29555116', '1987-06-28', '1122334464', 'marinasilva@email.com', '1122334465', '2023-04-05', 300000.00);
 
-INSERT INTO CLASES (ID_CLASE, NOMBRE_CLASE, ID_EMPLEADO, DIAS, HORARIO, ID_MATERIAL)
+INSERT INTO CLASES (ID_CLASE, NOMBRE_CLASE, ID_EMPLEADO, DIAS, HORARIO_INICIO, HORARIO_FIN, ID_MATERIAL)
 VALUES
-    (1, 'Spinning', 8, 'Monday, Wednesday, Friday', '18:00-19:00', 2),
-    (2, 'Yoga', 7, 'Tuesday, Thursday', '09:00-10:00', 1),
-    (3, 'Pilates', 7, 'Monday, Wednesday', '09:00-10:00', 5),
-    (4, 'Funcional', 9, 'Monday, Wednesday', '11:00-12:00', 4),
-    (5, 'Fútbol Fit', 9, 'Thursday, Saturday', '18:00-19:00', 3),
-	(6, 'CrossFit', 13, 'Tuesday, Thursday, Saturday', '17:00-18:00', 8),
-    (7, 'Zumba', 14, 'Monday, Wednesday', '19:00-20:00', 6),
-    (8, 'Entrenamiento Funcional', 15, 'Friday, Sunday', '10:00-11:00', 9),
-    (9, 'Aeróbicos', 16, 'Monday, Wednesday, Friday', '08:00-09:00', 11),
-    (10, 'Boxeo Fitness', 17, 'Tuesday, Thursday', '18:30-19:30', 7);
+    (1, 'Spinning', 8, 'Monday, Wednesday, Friday', '18:00', '19:00', 2),
+    (2, 'Yoga', 7, 'Tuesday, Thursday', '09:00', '10:00', 1),
+    (3, 'Pilates', 7, 'Monday, Wednesday', '09:00', '10:00', 5),
+    (4, 'Funcional', 9, 'Monday, Wednesday', '11:00', '12:00', 4),
+    (5, 'Fútbol Fit', 9, 'Thursday, Saturday', '18:00', '19:00', 3),
+    (6, 'CrossFit', 8, 'Tuesday, Thursday, Saturday', '17:00', '18:00', 8),
+    (7, 'Zumba', 8, 'Monday, Wednesday', '19:00', '20:00', 6),
+    (8, 'Entrenamiento Funcional', 9, 'Friday, Sunday', '10:00', '11:00', 9),
+    (9, 'Aeróbicos', 8, 'Monday, Wednesday, Friday', '08:00', '09:00', 11),
+    (10, 'Boxeo Fitness', 7, 'Tuesday, Thursday', '18:30', '19:30', 7);
 
 INSERT INTO PAGOS_EMPLEADOS (ID_EMPLEADO, DNI_EMPLEADO, CBU, ALIAS, BANCO)
 VALUES

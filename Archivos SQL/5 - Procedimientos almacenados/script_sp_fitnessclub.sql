@@ -68,4 +68,4 @@ END //
 DELIMITER ;
 
 -- INSERTO UN NUEVO MIEMBRO
-CALL InsertarMiembro(11, 'Lionel Messi', '30101010', '1987-06-24', 'lio10@email.com', '1122334455', '1122334456', 'SI', '2023-01-15');
+CALL InsertarMiembro(50, 'Lionel Messi', '30101010', '1987-06-24', 'lio10@email.com', '1122334455', '1122334456', 'SI', '2023-01-15');

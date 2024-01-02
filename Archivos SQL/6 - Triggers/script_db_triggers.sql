@@ -1,27 +1,3 @@
--- Tabla de log para MIEMBROS
-CREATE TABLE MIEMBROS_LOG (
-    ID_LOG INT AUTO_INCREMENT PRIMARY KEY,
-    OPERACION VARCHAR(10) NOT NULL,
-    ID_MIEMBRO INT,
-    NOMBRE_MIEMBRO VARCHAR(255),
-    DNI_MIEMBRO VARCHAR(20),
-    FECHA_OPERACION DATETIME,
-    USUARIO_OPERACION VARCHAR(255)
-);
-
--- Tabla de log para PAGOS
-CREATE TABLE PAGOS_LOG (
-    ID_LOG INT AUTO_INCREMENT PRIMARY KEY,
-    OPERACION VARCHAR(10) NOT NULL,
-    ID_MIEMBRO INT,
-    TIPO_MEMBRESIA VARCHAR(255),
-    MONTO DECIMAL(10, 2),
-    FECHA_ULTIMO_PAGO DATE,
-    METODO_DE_PAGO VARCHAR(255),
-    FECHA_OPERACION DATETIME,
-    USUARIO_OPERACION VARCHAR(255)
-);
-
 -- Este trigger registra la operación antes de insertar un nuevo miembro: evita la inserción de un nuevo miembro que tenga el mismo DNI que otro miembro ya existente en la base de datos.
 DROP TRIGGER IF EXISTS before_insert_miembros;
 DELIMITER //
@@ -96,7 +72,7 @@ SELECT * FROM PAGOS_LOG;
 
 -- inserto un nuevo miembro con dni ya existente
 INSERT INTO MIEMBROS (ID_MIEMBRO, NOMBRE_MIEMBRO, DNI_MIEMBRO, NACIMIENTO, EMAIL, CELULAR, CONTACTO_EMERGENCIA, ACTO_MEDICO, FECHA_ALTA)
-VALUES ('12','Miley Cyrus', '30123456', '1992-11-23', 'soyhannahmontana@email.com', '1122334455', '1122334456', 'si', '2023-12-01');
+VALUES ('52','Miley Cyrus', '30123456', '1992-11-23', 'soyhannahmontana@email.com', '1122334455', '1122334456', 'si', '2023-12-01');
 
 -- Verifico el registro 
 SELECT * FROM MIEMBROS_LOG;
