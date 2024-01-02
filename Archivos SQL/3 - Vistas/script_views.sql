@@ -1,6 +1,6 @@
 /*
     Descripción de las vistas:
-    1) vw_miembros_pagos_info : sirve para visualizar la información más relevante de los miembros. Utiliza las tablas "MIEMBROS" Y "PAGOS".
+    1) vw_miembros_pagos_info : sirve para visualizar la información más relevante de los pagos de los miembros. Utiliza las tablas "MIEMBROS", "REGISTRO_PAGOS" Y "PAGOS".
     2) vw_empleados_puestos : sirve para ver los empleados y sus puestos en una sola vista ya que el puesto del empleado en la tabla EMPLEADOS es un ID, en esta vista trae directamente el puesto y el nombre del empleado. Utiliza las tablas "EMPLEADOS" Y "PUESTOS_EMPLEADOS".
     3) vw_clases_empleados_hoy : sirve para ver que clases se dan en el día de hoy, horario y el instructor asignado. Utiliza las tablas "CLASES" y "EMPLEADOS"
     4) vw_clase_empleado_material : sirve para ver los materiales que va a utilizar el empleado y en qué clase. Utiliza las tablas "MATERIALES" , "EMPLEADOS" y "CLASES".
@@ -13,10 +13,12 @@ SELECT
     M.NOMBRE_MIEMBRO,
     M.FECHA_ALTA,
     P.TIPO_MEMBRESIA,
-    P.FECHA_ULTIMO_PAGO
+    P.MONTO,
+    RP.PERIODO
 FROM
     MIEMBROS AS M
-    LEFT JOIN PAGOS AS P ON M.ID_MIEMBRO = P.ID_MIEMBRO);
+    LEFT JOIN PAGOS AS P ON M.ID_MIEMBRO = P.ID_MIEMBRO
+    LEFT JOIN REGISTRO_PAGOS AS RP ON M.ID_MIEMBRO = RP.ID_MIEMBRO);
 
 CREATE OR REPLACE VIEW vw_empleados_puestos AS (
 SELECT
@@ -26,6 +28,7 @@ FROM
     EMPLEADOS AS E
     JOIN PUESTOS_EMPLEADOS AS P ON E.ID_PUESTO = P.ID_PUESTO );
     
+
 CREATE OR REPLACE VIEW vw_clases_empleados_hoy AS (
 SELECT
     C.NOMBRE_CLASE AS CLASE,

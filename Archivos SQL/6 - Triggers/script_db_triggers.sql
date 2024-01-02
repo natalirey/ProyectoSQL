@@ -22,7 +22,7 @@ CREATE TABLE PAGOS_LOG (
     USUARIO_OPERACION VARCHAR(255)
 );
 
--- Este trigger registra la operación antes de insertar un nuevo miembro.
+-- Este trigger registra la operación antes de insertar un nuevo miembro: evita la inserción de un nuevo miembro que tenga el mismo DNI que otro miembro ya existente en la base de datos.
 DROP TRIGGER IF EXISTS before_insert_miembros;
 DELIMITER //
 CREATE TRIGGER before_insert_miembros
