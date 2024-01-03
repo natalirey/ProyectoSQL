@@ -2,7 +2,7 @@
 
 Base de datos dedicada al control, gestion y administracion de un gimnasio.
 
-Se utiliza la version MySQL 8.0
+Se utiliza la version MySQL WorkBench 8.0
 
 ## Guía para la instalación
 
