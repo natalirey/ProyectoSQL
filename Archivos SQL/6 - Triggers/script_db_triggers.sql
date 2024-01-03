@@ -1,4 +1,4 @@
--- Este trigger registra la operación antes de insertar un nuevo miembro: evita la inserción de un nuevo miembro que tenga el mismo DNI que otro miembro ya existente en la base de datos.
+-- Este trigger registra la operación antes de insertar un nuevo miembro.
 DROP TRIGGER IF EXISTS before_insert_miembros;
 DELIMITER //
 CREATE TRIGGER before_insert_miembros
@@ -72,7 +72,11 @@ SELECT * FROM PAGOS_LOG;
 
 -- inserto un nuevo miembro con dni ya existente
 INSERT INTO MIEMBROS (ID_MIEMBRO, NOMBRE_MIEMBRO, DNI_MIEMBRO, NACIMIENTO, EMAIL, CELULAR, CONTACTO_EMERGENCIA, ACTO_MEDICO, FECHA_ALTA)
-VALUES ('52','Miley Cyrus', '30123456', '1992-11-23', 'soyhannahmontana@email.com', '1122334455', '1122334456', 'si', '2023-12-01');
+VALUES ('34','Miley Cyrus', '30123456', '1992-11-23', 'soyhannahmontana@email.com', '1122334455', '1122334456', 'si', '2023-12-01');
+
+-- inserto un nuevo miembro inexistente
+INSERT INTO MIEMBROS (ID_MIEMBRO, NOMBRE_MIEMBRO, DNI_MIEMBRO, NACIMIENTO, EMAIL, CELULAR, CONTACTO_EMERGENCIA, ACTO_MEDICO, FECHA_ALTA)
+VALUES ('51','Franco Suculini', '42051749', '1998-01-23', 'FRANCOSUCULINI@email.com', '1121434455', '1199334456', 'si', '2024-01-02');
 
 -- Verifico el registro 
 SELECT * FROM MIEMBROS_LOG;
